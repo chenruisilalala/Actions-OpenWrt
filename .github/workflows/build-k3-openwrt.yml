@@ -92,7 +92,13 @@ jobs:
       with:
         name: OpenWrt_bin
         path: openwrt/bin
-
+    - name: Upload file
+      uses: actions/upload-artifact@master
+      if: always()
+      with:
+        name: OpenWrt_bin
+        path: OpenWrt_bin/targets/bcm53xx/generic/openwrt-bcm53xx-phicomm-k3-squashfs.trx
+      
     - name: Organize files
       if: always()
       run: |
