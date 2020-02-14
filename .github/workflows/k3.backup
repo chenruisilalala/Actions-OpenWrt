@@ -11,11 +11,11 @@ name: Build OpenWrt-k3
 on: 
   release:
     types: [published]
-  push:
-    branches: 
-      - master
-    paths:
-      - 'k3.config'
+#  push:
+#    branches: 
+#      - master
+#    paths:
+#      - 'k3.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
