@@ -97,13 +97,14 @@ jobs:
       if: always()
       with:
         name: OpenWrt_bin
-        path: OpenWrt/bin/targets/bcm53xx/generic/openwrt-bcm53xx-phicomm-k3-squashfs.trx
+        path: OpenWrt/bin
       
     - name: Organize files
       if: always()
       run: |
         cd openwrt/bin/targets/*/*
         rm -rf packages
+        ls | grep -v k3-s | xargs rm -rf 
         echo "::set-env name=FIRMWARE::$(pwd)"
     - name: Upload firmware
       uses: actions/upload-artifact@master
