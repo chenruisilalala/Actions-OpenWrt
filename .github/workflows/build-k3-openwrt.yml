@@ -97,7 +97,7 @@ jobs:
       if: always()
       with:
         name: OpenWrt_bin
-        path: OpenWrt_bin/targets/bcm53xx/generic/openwrt-bcm53xx-phicomm-k3-squashfs.trx
+        path: OpenWrt/bin/targets/bcm53xx/generic/openwrt-bcm53xx-phicomm-k3-squashfs.trx
       
     - name: Organize files
       if: always()
