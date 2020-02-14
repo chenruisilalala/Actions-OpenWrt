@@ -8,14 +8,14 @@
 
 name: Build OpenWrt-n270
 
-on: 
-  release:
-    types: [published]
-  push:
-    branches: 
-      - master
-    paths:
-      - 'n270.config'
+#on: 
+#  release:
+#    types: [published]
+#  push:
+#    branches: 
+#      - master
+#    paths:
+#      - 'n270.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
