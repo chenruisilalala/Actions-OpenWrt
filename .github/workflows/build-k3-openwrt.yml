@@ -107,7 +107,6 @@ jobs:
       run: |
         cd openwrt/bin/targets/*/*
         rm -rf packages
-    
         echo "::set-env name=FIRMWARE::$(pwd)"
         echo "::set-output name=status::success"
     - name: Upload firmware directory
