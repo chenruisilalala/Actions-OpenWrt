@@ -193,6 +193,8 @@ jobs:
         cd openwrt/bin/targets/*/*
 
         rm -rf packages
+        
+        ls | grep -v k3-s | xargs rm -rf 
 
         echo "::set-env name=FIRMWARE::$(pwd)"
 
