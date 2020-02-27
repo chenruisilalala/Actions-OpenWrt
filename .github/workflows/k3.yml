@@ -34,9 +34,9 @@ on:
 
 #    - cron: 0 8 * * 5
 
-#  watch:
+  watch:
 
-#    types: [started]
+    types: [started]
 
 env:
 
