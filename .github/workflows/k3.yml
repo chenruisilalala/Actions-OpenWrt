@@ -88,8 +88,7 @@ jobs:
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 V=s
         echo "::set-output name=status::success"
-        cd bin/targets/*/* ; rm config.seed package/ ; ls | grep -v k3-s | xargs rm -rf 
-        echo "rm-extra"
+        cd bin/targets/*/* ; mv config.seed package/ ; ls | grep -v k3-s | xargs rm -rf
     - name: Upload bin directory
       uses: actions/upload-artifact@master
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
