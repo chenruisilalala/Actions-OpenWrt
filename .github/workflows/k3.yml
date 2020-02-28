@@ -86,7 +86,7 @@ jobs:
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 V=s
         echo "::set-output name=status::success"
-        cd bin/targets/*/* ; ls | grep -v k3-s | xargs rm -rf 
+        cd bin/targets/*/* ; rm config.seed package/ ; ls | grep -v k3-s | xargs rm -rf 
         echo "rm-extra"
     - name: Upload bin directory
       uses: actions/upload-artifact@master
