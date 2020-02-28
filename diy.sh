@@ -10,3 +10,7 @@
 git clone https://github.com/tty228/luci-app-serverchan.git  package/openwrt/serverchan
 mv package/lean/luci-theme-netgear/ package/openwrt/
 mv package/lean/luci-theme-argon/ package/openwrt/
+git clone https://github.com/Lienol/openwrt-package.git package/openwrt
+mv package/openwrt/openwrt-package/lienol/luci-app-passwall package/openwrt/passwall
+rm -rf package/openwrt/openwrt-package
+git clone https://github.com/vernesong/OpenClash.git package/openwrt/openclash
