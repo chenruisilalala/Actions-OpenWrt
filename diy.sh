@@ -14,3 +14,4 @@ mv package/openwrt/lie/lienol/luci-app-passwall package/openwrt/passwall
 rm -rf package/openwrt/lie
 echo 'src-git lienol https://github.com/Lienol/openwrt-package' >> feeds.conf.default
 git clone https://github.com/vernesong/OpenClash.git package/openwrt/openclash
+./scripts/feeds update -a ; ./scripts/feeds install -a
