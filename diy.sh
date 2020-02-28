@@ -8,7 +8,8 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 git clone https://github.com/tty228/luci-app-serverchan.git  package/openwrt/serverchan
-mv package/lean/luci-theme-netgear/ package/openwrt/netgear
+#mv package/lean/luci-theme-netgear/ package/openwrt/netgear
+mv  package/openwrt/lie/lienol/luci-theme-netgear-mc/ package/openwrt/
 git clone https://github.com/Lienol/openwrt-package.git package/openwrt/lie
 mv package/openwrt/lie/lienol/luci-app-passwall package/openwrt/passwall
 rm -rf package/openwrt/lie
