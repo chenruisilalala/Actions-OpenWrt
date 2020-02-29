@@ -81,6 +81,12 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
+    - name: delextra
+      run: |
+        cd openwrt/bin/targets/*/*  
+        mv config.seed packages/
+        ls | grep -v k3-s | grep -v pack | xargs rm -rf 
+
     - name: Compile the firmware
       id: compile
       run: |
@@ -88,7 +94,6 @@ jobs:
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 V=s
         echo "::set-output name=status::success"
-        cd bin/targets/*/* ; mv config.seed package/ ; ls | grep -v k3-s | xargs rm -rf
     - name: Upload bin directory
       uses: actions/upload-artifact@master
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
