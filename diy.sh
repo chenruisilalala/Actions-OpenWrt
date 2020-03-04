@@ -10,8 +10,6 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 ./scripts/feeds update -a ; ./scripts/feeds install -a
 git clone https://github.com/tty228/luci-app-serverchan.git  package/openwrt/luci-app-serverchan
 git clone https://github.com/Lienol/openwrt-package.git package/openwrt/lie
-mv  package/openwrt/lie/lienol/luci-theme-netgear-mc/ package/openwrt/
-git clone https://github.com/Lienol/openwrt-package.git package/openwrt/lie
 mv package/openwrt/lie/lienol/luci-app-pppoe-relay package/openwrt/luci-app-pppoe-relay
 mv package/openwrt/lie/lienol/luci-app-passwall package/openwrt/luci-app-passwall
 rm -rf package/openwrt/lie
