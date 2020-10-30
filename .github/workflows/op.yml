@@ -6,8 +6,8 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+        required: true
+        default: 'true'
   watch:
     types: started
 #  schedule:
